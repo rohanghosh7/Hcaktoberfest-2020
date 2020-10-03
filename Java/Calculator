@@ -1,0 +1,73 @@
+
+public class Calculator {
+	public static void main(String args[])
+	{
+		double result = 0;
+		double sresult = 0;
+		
+		double first = 1;
+		double second = 0;
+		
+		int operator = 4;
+		
+		if(operator == 1)
+		{
+			result = first + second;
+			System.out.println("Result using if-else condition: " + result);
+		}
+		else if(operator == 2)
+		{
+			result = first - second;
+			System.out.println("Result using if-else condition: " + result);
+		}
+		else if(operator == 3)
+		{
+			result = first * second;
+			System.out.println("Result using if-else condition: " + result);
+		}
+		else if(operator == 4)
+		{
+			if(second == 0)
+        		System.out.println("Result using if-else condition: Invallid");
+        	else
+        	{
+        		result = first / second;
+        		System.out.println("Result using if-else condition: " + result);
+        	}	
+		}
+		else
+			System.out.println("Incorrect option!");
+		
+		switch(operator)
+        {
+            case 1:
+                sresult = first + second;
+                System.out.println("Result using switch-case condition: " + sresult);
+                break;
+
+            case 2:
+                sresult = first - second;
+                System.out.println("Result using switch-case condition: " + sresult);
+                break;
+
+            case 3:
+                sresult = first * second;
+                System.out.println("Result using switch-case condition: " + sresult);
+                break;
+
+            case 4:
+            	if(second == 0)
+            		System.out.println("Result using switch-case condition: Invallid");
+            	else
+            	{
+            		sresult = first / second;
+            		System.out.println("Result using switch condition: " + sresult);
+            	}	
+                break;
+
+            default:
+                System.out.printf("Error! incorrect option");
+                return;
+        }
+	}
+}
